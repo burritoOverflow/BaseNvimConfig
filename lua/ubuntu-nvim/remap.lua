@@ -47,3 +47,11 @@ vim.keymap.set("n", "<leader>bp", ":bprevious<CR>")
 -- splits
 vim.keymap.set("n", "<leader>v", ":vsplit<CR>")
 vim.keymap.set("n", "<leader>h", ":split<CR>")
+
+-- tab navigation
+vim.keymap.set("n", "tn", ":tabnew<CR>")
+vim.keymap.set("n", "td", ":tabclose<CR>")
+vim.keymap.set("n", "tj", ":tabprev<CR>")
+vim.keymap.set("n", "tk", ":tabnext<CR>")
+vim.keymap.set("n", "tt", ":tabfirst<CR>")
+vim.keymap.set("n", "tT", ":tablast<CR>")

@@ -1,5 +1,4 @@
 vim.g.mapleader = " "
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
 -- add new lines
 vim.keymap.set("n", "<leader>o", "o<esc>")
@@ -14,6 +13,8 @@ vim.keymap.set("n", "J", "mzJ`z")
 -- keep cursor in middle
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
+vim.keymap.set("n", "{", "{zz")
+vim.keymap.set("n", "}", "}zz")
 
 -- greatest remap ever (delete into void reg and paste)
 vim.keymap.set("x", "<leader>p", "\"_dP")
@@ -51,7 +52,16 @@ vim.keymap.set("n", "<leader>h", ":split<CR>")
 -- tab navigation
 vim.keymap.set("n", "tn", ":tabnew<CR>")
 vim.keymap.set("n", "td", ":tabclose<CR>")
+
 vim.keymap.set("n", "tj", ":tabprev<CR>")
+vim.keymap.set("n", "th", ":tabprev<CR>")
+
 vim.keymap.set("n", "tk", ":tabnext<CR>")
+vim.keymap.set("n", "tl", ":tabnext<CR>")
+
 vim.keymap.set("n", "tt", ":tabfirst<CR>")
 vim.keymap.set("n", "tT", ":tablast<CR>")
+
+-- diagnostics
+vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = "Open floating diagnostic message" })
+vim.keymap.set('n', '<leader>E', vim.diagnostic.setloclist, { desc = "Open diagnostics list" })
